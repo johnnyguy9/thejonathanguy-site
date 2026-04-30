@@ -1,0 +1,14 @@
+# Cloudflare Pages redirect rules
+
+# Old/legacy routes redirect home
+/about       /            301
+/about.html  /            301
+/consulting  https://pointwake.com/  301
+/blog        /            301
+/blog/*      /            301
+/resume      /            301
+/cv          /            301
+
+# Friendly aliases
+/hire        /contact.html  302
+/book        /contact.html  302
