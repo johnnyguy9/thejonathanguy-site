@@ -63,6 +63,7 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
+body.lightbox-open { overflow: hidden; }
 img, svg, video { max-width: 100%; height: auto; display: block; }
 img { background-color: var(--c-surface); }
 
@@ -784,6 +785,264 @@ hr {
   }
 }
 
+/* -------- Album sliders -------- */
+.album-stack {
+  display: grid;
+  gap: 3rem;
+}
+@media (min-width: 900px) {
+  .album-stack { gap: 4rem; }
+}
+.album-block {
+  display: grid;
+  gap: 1.6rem;
+}
+@media (min-width: 1080px) {
+  .album-block {
+    grid-template-columns: minmax(250px, 0.36fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+}
+.album-copy {
+  display: grid;
+  gap: 1rem;
+}
+.album-copy p {
+  max-width: 34ch;
+  color: var(--c-cream-dim);
+  margin: 0;
+}
+
+.carousel {
+  border: 1px solid var(--c-line);
+  background:
+    linear-gradient(180deg, rgba(201,169,97,0.05) 0%, rgba(10,8,7,0) 18%),
+    var(--c-surface);
+  padding: clamp(1rem, 2vw, 1.35rem);
+}
+.carousel-stage {
+  position: relative;
+  min-height: clamp(24rem, 58vw, 44rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top, rgba(201,169,97,0.10), transparent 45%),
+    #0d0a08;
+  border: 1px solid var(--c-line-soft);
+  overflow: hidden;
+}
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity var(--t-med) var(--ease), transform var(--t-med) var(--ease);
+}
+.carousel-slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+.carousel-zoom {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+.carousel-zoom img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(72vh, 760px);
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
+}
+.carousel-toolbar {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.15rem;
+}
+@media (min-width: 880px) {
+  .carousel-toolbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+}
+.carousel-copy {
+  display: grid;
+  gap: 0.4rem;
+}
+.carousel-title {
+  font-size: clamp(1.35rem, 2vw, 1.85rem);
+  font-style: italic;
+}
+.carousel-caption,
+.lightbox-caption {
+  margin: 0;
+  color: var(--c-cream-dim);
+  max-width: 52ch;
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+.carousel-controls,
+.lightbox-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.carousel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 82px;
+  height: 44px;
+  padding: 0 1rem;
+  border: 1px solid var(--c-line);
+  background: rgba(26, 22, 18, 0.9);
+  color: var(--c-cream);
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+.carousel-btn:hover,
+.carousel-btn:focus-visible {
+  border-color: var(--c-gold);
+  color: var(--c-gold);
+  transform: translateY(-1px);
+}
+.carousel-counter,
+.lightbox-counter {
+  font-family: var(--f-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+}
+.carousel-thumbs {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  margin-top: 1.3rem;
+}
+.carousel-thumb {
+  display: grid;
+  gap: 0.65rem;
+  padding: 0.55rem;
+  border: 1px solid var(--c-line);
+  background: var(--c-surface-2);
+  color: var(--c-cream-dim);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+.carousel-thumb:hover,
+.carousel-thumb:focus-visible {
+  border-color: var(--c-gold-line);
+  color: var(--c-cream);
+  transform: translateY(-1px);
+}
+.carousel-thumb.is-active {
+  border-color: var(--c-gold);
+  background: rgba(201, 169, 97, 0.08);
+  color: var(--c-cream);
+}
+.carousel-thumb-media {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0d0a08;
+  padding: 0.35rem;
+}
+.carousel-thumb img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  background: transparent;
+}
+.carousel-thumb-label {
+  font-family: var(--f-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* -------- Lightbox -------- */
+.lightbox[hidden] { display: none; }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(10, 8, 7, 0.94);
+}
+.lightbox-dialog {
+  width: min(1240px, 100%);
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  padding: clamp(1rem, 2vw, 1.35rem);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+.lightbox-top {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 900px) {
+  .lightbox-top {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+  }
+}
+.lightbox-copy {
+  display: grid;
+  gap: 0.45rem;
+}
+.lightbox-title {
+  font-size: clamp(1.45rem, 2.1vw, 2rem);
+  font-style: italic;
+}
+.lightbox-stage {
+  min-height: min(76vh, 860px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top, rgba(201,169,97,0.10), transparent 40%),
+    #0d0a08;
+  border: 1px solid var(--c-line-soft);
+  padding: clamp(0.8rem, 2vw, 1.4rem);
+}
+.lightbox-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  background: transparent;
+}
+
 /* -------- Article body -------- */
 .article {
   padding: 6rem 0 2rem;
@@ -951,4 +1210,22 @@ hr {
   h1 .ital { font-size: 0.85em; }
   .belief { gap: 0.4rem; }
   .belief-num { font-size: 0.7rem; }
+  .carousel-stage {
+    min-height: 24rem;
+  }
+  .carousel-zoom img {
+    max-height: 60vh;
+  }
+  .carousel-thumbs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lightbox {
+    padding: 0.75rem;
+  }
+  .lightbox-stage {
+    min-height: auto;
+  }
+  .lightbox-image {
+    max-height: 60vh;
+  }
 }
