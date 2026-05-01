@@ -744,6 +744,46 @@ hr {
   .feature-portrait { aspect-ratio: 16 / 9; }
 }
 
+.feature-full {
+  aspect-ratio: auto;
+  padding: clamp(0.75rem, 1.5vw, 1.25rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--c-line);
+}
+.feature-full img {
+  width: 100%;
+  height: auto;
+  max-height: min(80vh, 980px);
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+  background: transparent;
+}
+@media (min-width: 768px) {
+  .feature-full.feature-portrait { aspect-ratio: auto; }
+}
+
+.gallery figure.photo-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.4rem, 0.9vw, 0.75rem);
+}
+.gallery figure.photo-full img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+@media (min-width: 700px) {
+  .gallery figure.photo-full img {
+    height: 100%;
+  }
+}
+
 /* -------- Article body -------- */
 .article {
   padding: 6rem 0 2rem;
