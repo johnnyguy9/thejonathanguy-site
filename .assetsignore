@@ -1,0 +1,11 @@
+# Files Cloudflare Pages should NOT deploy
+_lake-staging/
+_partials/
+*.sh
+README.md
+.gitignore
+.assetsignore
+import-downloads.sh
+import-lake-photos.sh
+push-static-to-github.sh
+thejonathanguy-deploy.zip

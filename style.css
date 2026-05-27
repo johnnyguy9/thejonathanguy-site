@@ -1,21 +1,21 @@
 /* ==========================================================================
    TheJonathanGuy.com
-   Editorial personal site — Brandon B. Jonathan Guy
-   Premium design system: warm black + champagne gold + cream
+   Editorial personal site, Brandon B. Jonathan Guy
+   Warm black, champagne gold, cream. Italiana serif, Italianno script.
    ========================================================================== */
 
 :root {
-  /* Color — warm editorial */
-  --c-bg:           #0a0807;     /* warm near-black */
-  --c-surface:      #13100d;     /* elevated panel */
-  --c-surface-2:    #1a1612;     /* second elevation */
-  --c-cream:        #f4ede0;     /* warm cream — primary text on dark */
-  --c-cream-soft:   #ddd2bf;     /* muted cream */
-  --c-cream-dim:    #8a857c;     /* dim text */
+  /* Color */
+  --c-bg:           #0a0807;
+  --c-surface:      #13100d;
+  --c-surface-2:    #1a1612;
+  --c-cream:        #f4ede0;
+  --c-cream-soft:   #ddd2bf;
+  --c-cream-dim:    #8a857c;
   --c-line:         rgba(244,237,224,0.10);
   --c-line-soft:    rgba(244,237,224,0.06);
 
-  /* Champagne gold system */
+  /* Champagne gold */
   --c-gold:         #c9a961;
   --c-gold-bright:  #e2c47a;
   --c-gold-deep:    #9d7d3a;
@@ -24,7 +24,9 @@
   --c-gold-glow:    rgba(201,169,97,0.06);
 
   /* Type */
-  --f-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --f-display: 'Italiana', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --f-body:    'Cormorant Garamond', Georgia, serif;
+  --f-script:  'Italianno', 'Petit Formal Script', cursive;
   --f-sans:    'Inter Tight', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --f-mono:    'JetBrains Mono', 'SF Mono', Menlo, Consolas, monospace;
 
@@ -43,7 +45,7 @@
   color-scheme: dark;
 }
 
-/* -------- Reset / base -------- */
+/* Reset / base */
 *, *::before, *::after { box-sizing: border-box; }
 html {
   scroll-behavior: smooth;
@@ -59,51 +61,62 @@ body {
   background: var(--c-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'kern', 'liga', 'calt', 'ss01';
+  font-feature-settings: 'kern', 'liga', 'calt';
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 img, svg, video { max-width: 100%; height: auto; display: block; }
 img { background-color: var(--c-surface); }
 
-/* Display headings */
+/* Display headings: Italiana */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--f-display);
   color: var(--c-cream);
   font-weight: 400;
   line-height: 1.04;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.005em;
   margin: 0;
-  font-variation-settings: 'opsz' 144;
 }
 h1 {
-  font-size: clamp(3rem, 8.5vw, 7rem);
-  letter-spacing: -0.035em;
-  font-weight: 400;
-  font-variation-settings: 'opsz' 144;
+  font-size: clamp(3rem, 8.5vw, 7.2rem);
+  letter-spacing: -0.012em;
+  line-height: 1.02;
 }
 h2 {
   font-size: clamp(2rem, 4.5vw, 3.4rem);
-  letter-spacing: -0.025em;
-  font-variation-settings: 'opsz' 96;
+  letter-spacing: -0.008em;
+  line-height: 1.08;
 }
 h3 {
-  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
-  letter-spacing: -0.018em;
-  line-height: 1.2;
-  font-variation-settings: 'opsz' 36;
+  font-size: clamp(1.4rem, 2.2vw, 1.95rem);
+  letter-spacing: -0.005em;
+  line-height: 1.18;
 }
 h4 {
-  font-size: 1.15rem;
-  letter-spacing: -0.01em;
-  font-variation-settings: 'opsz' 24;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+}
+
+/* Italic accent uses Cormorant for cleaner italic shapes (Italiana lacks an italic) */
+.serif-ital {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Script (cursive monogram) */
+.script {
+  font-family: var(--f-script);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.9;
 }
 
 p {
   margin: 0 0 1.4rem;
   color: var(--c-cream-soft);
   font-size: 1.0625rem;
-  line-height: 1.75;
+  line-height: 1.78;
 }
 p:last-child { margin-bottom: 0; }
 
@@ -126,7 +139,7 @@ a:hover {
 ::selection { background: var(--c-gold); color: var(--c-bg); }
 
 strong { color: var(--c-cream); font-weight: 600; }
-em { color: var(--c-cream); font-style: italic; }
+em { color: var(--c-cream); font-style: italic; font-family: 'Cormorant Garamond', Georgia, serif; }
 
 hr {
   border: 0;
@@ -135,7 +148,7 @@ hr {
   margin: 5rem 0;
 }
 
-/* -------- Layout -------- */
+/* Layout */
 .container {
   max-width: var(--container);
   margin: 0 auto;
@@ -161,7 +174,7 @@ hr {
   .container-prose { padding: 0 2rem; }
 }
 
-/* -------- Editorial typography helpers -------- */
+/* Editorial typography */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -192,14 +205,13 @@ hr {
 }
 
 .lede {
-  font-family: var(--f-display);
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 400;
   font-style: italic;
-  font-size: clamp(1.25rem, 2.1vw, 1.6rem);
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
   line-height: 1.45;
   color: var(--c-cream-soft);
-  letter-spacing: -0.012em;
-  font-variation-settings: 'opsz' 36;
+  letter-spacing: 0;
   max-width: 38ch;
 }
 
@@ -222,7 +234,7 @@ hr {
   line-height: 1.55;
 }
 
-/* -------- Header / Nav -------- */
+/* Header / Nav */
 .site-header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -239,29 +251,35 @@ hr {
   justify-content: space-between;
   padding: 1.4rem 0;
 }
+
+/* Brand: cursive script monogram + name */
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  font-family: var(--f-display);
-  font-weight: 500;
-  font-size: 1.05rem;
+  gap: 0.85rem;
   color: var(--c-cream);
-  letter-spacing: -0.015em;
   background: none;
+  text-decoration: none;
 }
 .brand:hover { color: var(--c-gold); background-size: 0; }
 .brand .mark {
-  font-family: var(--f-display);
-  font-size: 1rem;
-  font-weight: 600;
+  font-family: var(--f-script);
+  font-size: 2.4rem;
+  font-weight: 400;
   letter-spacing: -0.04em;
   color: var(--c-gold);
-  border: 1px solid var(--c-gold-line);
-  padding: 0.18rem 0.5rem 0.22rem;
-  border-radius: 2px;
+  line-height: 0.85;
+  display: inline-block;
+  margin-top: -2px;
+}
+.brand .name {
+  font-family: var(--f-display);
+  font-size: 1.05rem;
+  letter-spacing: 0;
+  color: inherit;
   line-height: 1;
 }
+
 .nav-links {
   display: none;
   list-style: none;
@@ -321,10 +339,9 @@ hr {
   font-size: 1.5rem;
   color: var(--c-cream);
   background: none;
-  letter-spacing: -0.015em;
 }
 
-/* -------- Buttons -------- */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -364,8 +381,9 @@ hr {
   background-size: 0;
 }
 .btn::after {
-  content: "→";
+  content: "›";
   font-family: var(--f-sans);
+  font-size: 1.1rem;
   letter-spacing: 0;
   transition: transform var(--t-fast) var(--ease);
 }
@@ -376,7 +394,7 @@ hr {
   gap: 0.85rem;
 }
 
-/* -------- Hero (home) -------- */
+/* Hero */
 .hero {
   padding-top: 7rem;
   padding-bottom: 4.5rem;
@@ -393,21 +411,29 @@ hr {
 }
 @media (min-width: 900px) {
   .hero-grid {
-    grid-template-columns: 1.15fr 1fr;
+    grid-template-columns: 1.05fr 1fr;
     gap: 5rem;
   }
 }
 .hero-portrait {
   position: relative;
-  aspect-ratio: 4 / 5;
   background: var(--c-surface);
-  overflow: hidden;
   border: 1px solid var(--c-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  min-height: 420px;
 }
 .hero-portrait img {
-  width: 100%; height: 100%;
-  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
   object-position: center top;
+  background: var(--c-surface);
   filter: contrast(1.04) saturate(0.96);
 }
 .hero-portrait::after {
@@ -426,6 +452,7 @@ hr {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--c-cream-dim);
+  flex-wrap: wrap;
 }
 .hero-meta .dot {
   width: 4px; height: 4px; border-radius: 50%;
@@ -439,14 +466,15 @@ hr {
   font-style: italic;
   font-weight: 400;
   color: var(--c-gold);
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   display: block;
-  font-size: 0.78em;
-  margin-top: 0.15em;
-  font-variation-settings: 'opsz' 144;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.7em;
+  margin-top: 0.1em;
+  line-height: 1;
 }
 
-/* -------- Section system -------- */
+/* Section */
 .section {
   padding: 6rem 0;
   position: relative;
@@ -472,7 +500,95 @@ hr {
   border-radius: 50%;
 }
 
-/* Pull quote — tagline */
+/* Credentials */
+.credentials {
+  padding: 6rem 0;
+  border-top: 1px solid var(--c-line);
+  background:
+    radial-gradient(ellipse at top right, var(--c-gold-glow) 0%, transparent 55%),
+    var(--c-bg);
+}
+.cert-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .cert-grid {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 4.5rem;
+  }
+}
+.cert-card {
+  display: block;
+  background: #fdfaf3;
+  border: 1px solid var(--c-line);
+  padding: 1rem;
+  box-shadow: 0 30px 80px -40px rgba(0,0,0,0.7);
+  transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
+  text-decoration: none;
+}
+.cert-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 40px 100px -40px rgba(201,169,97,0.35);
+}
+.cert-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.cert-issuer {
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 1rem;
+}
+.cert-title {
+  font-family: var(--f-display);
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: var(--c-cream);
+}
+.cert-presented {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--c-cream-soft);
+  margin-bottom: 2rem;
+}
+.cert-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: grid;
+  gap: 0.65rem;
+  border-top: 1px solid var(--c-line-soft);
+  padding-top: 1.5rem;
+}
+.cert-meta li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  align-items: baseline;
+}
+.cert-label {
+  font-family: var(--f-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--c-cream-dim);
+}
+.cert-value {
+  color: var(--c-cream);
+  font-family: var(--f-sans);
+  font-size: 0.96rem;
+  line-height: 1.4;
+}
+
+/* Pull quote */
 .pullquote {
   padding: 7rem 0;
   text-align: center;
@@ -484,14 +600,13 @@ hr {
   border-bottom: 1px solid var(--c-line);
 }
 .pullquote-text {
-  font-family: var(--f-display);
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(2rem, 5.5vw, 4rem);
+  font-size: clamp(2.2rem, 5.8vw, 4.2rem);
   line-height: 1.1;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.005em;
   color: var(--c-cream);
-  font-variation-settings: 'opsz' 144;
   max-width: 18ch;
   margin: 0 auto;
 }
@@ -504,7 +619,7 @@ hr {
   color: var(--c-gold);
 }
 
-/* -------- Companies block -------- */
+/* Companies */
 .companies {
   padding: 6rem 0;
   background: var(--c-surface);
@@ -533,35 +648,56 @@ hr {
 .company {
   background: var(--c-surface);
   padding: 3rem 2.5rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
   position: relative;
   overflow: hidden;
   text-decoration: none;
   background-image: none;
   transition: background var(--t-med) var(--ease);
-  min-height: 280px;
+  min-height: 320px;
 }
 .company:hover {
   background: var(--c-surface-2);
   background-size: 0;
 }
+.company-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+.company-logo {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--c-gold-line);
+  background: var(--c-bg);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 4px;
+  font-family: var(--f-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  color: var(--c-gold);
+  overflow: hidden;
+}
+.company-logo img { object-fit: contain; max-width: 80%; max-height: 80%; }
 .company-eyebrow {
   font-family: var(--f-mono);
   font-size: 0.7rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--c-gold);
-  margin-bottom: 1.5rem;
   display: block;
 }
 .company h3 {
   font-family: var(--f-display);
   font-size: 2rem;
   font-weight: 400;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.85rem;
+  letter-spacing: -0.005em;
   color: var(--c-cream);
-  font-variation-settings: 'opsz' 96;
   transition: color var(--t-fast) var(--ease);
 }
 .company:hover h3 { color: var(--c-gold-bright); }
@@ -585,7 +721,7 @@ hr {
 }
 .company-soon {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: auto;
   font-family: var(--f-mono);
   font-size: 0.7rem;
   letter-spacing: 0.18em;
@@ -594,9 +730,10 @@ hr {
   border: 1px solid var(--c-line);
   padding: 0.3rem 0.6rem;
   border-radius: 2px;
+  align-self: flex-start;
 }
 
-/* -------- Editorial story (origin) -------- */
+/* Story */
 .story {
   padding: 7rem 0;
 }
@@ -625,16 +762,15 @@ hr {
 }
 .story-body p:first-of-type::first-letter {
   font-family: var(--f-display);
-  font-size: 4rem;
+  font-size: 4.5rem;
   float: left;
   line-height: 0.95;
   margin: 0.18em 0.18em 0 -0.05em;
   color: var(--c-gold);
-  font-weight: 500;
-  font-variation-settings: 'opsz' 144;
+  font-weight: 400;
 }
 
-/* -------- Beliefs / principles -------- */
+/* Beliefs */
 .beliefs {
   padding: 7rem 0;
   background: var(--c-surface);
@@ -667,13 +803,13 @@ hr {
   color: var(--c-gold);
 }
 .belief-title {
-  font-family: var(--f-display);
-  font-size: 1.4rem;
-  font-weight: 400;
-  letter-spacing: -0.018em;
-  color: var(--c-cream);
-  font-variation-settings: 'opsz' 36;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--c-cream);
+  line-height: 1.2;
 }
 .belief-detail {
   color: var(--c-cream-dim);
@@ -681,7 +817,7 @@ hr {
   line-height: 1.65;
 }
 
-/* -------- Image grid (Lake Life) -------- */
+/* Gallery */
 .gallery {
   display: grid;
   gap: 1px;
@@ -699,15 +835,17 @@ hr {
 }
 .gallery figure img {
   width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--c-surface);
   transition: transform var(--t-slow) var(--ease);
 }
-.gallery figure:hover img { transform: scale(1.04); }
+.gallery figure:hover img { transform: scale(1.02); }
 @media (min-width: 700px) {
   .g-wide { grid-column: span 4; grid-row: span 2; }
   .g-tall { grid-column: span 2; grid-row: span 2; }
   .g-sq   { grid-column: span 2; grid-row: span 1; }
   .g-half { grid-column: span 3; grid-row: span 1; }
+  .g-full { grid-column: span 6; grid-row: span 2; }
 }
 .gallery figcaption {
   position: absolute;
@@ -724,27 +862,41 @@ hr {
 }
 .gallery figure:hover figcaption { opacity: 1; }
 
-/* -------- Family page hero -------- */
+/* Feature — natural image sizing, NEVER crops faces. No fixed aspect ratio. */
 .feature {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
   background: var(--c-surface);
   border-bottom: 1px solid var(--c-line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
 }
 .feature img {
-  width: 100%; height: 100%;
-  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
+  background: var(--c-surface);
 }
 .feature-portrait {
-  aspect-ratio: 3 / 4;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.feature-portrait img {
+  max-height: 74vh;
 }
 @media (min-width: 768px) {
-  .feature-portrait { aspect-ratio: 16 / 9; }
+  .feature { padding: 2rem 1.5rem; }
+  .feature-portrait { max-width: 720px; padding: 3rem 1.5rem; }
+  .feature-portrait img { max-height: 82vh; }
 }
 
-/* -------- Article body -------- */
+/* Article body */
 .article {
   padding: 6rem 0 2rem;
 }
@@ -763,7 +915,7 @@ hr {
 .article-body ul, .article-body ol { padding-left: 1.4rem; margin-bottom: 1.5rem; }
 .article-body li { margin-bottom: 0.55rem; color: var(--c-cream-soft); }
 
-/* -------- Contact -------- */
+/* Contact */
 .contact-card {
   display: grid;
   grid-template-columns: 1fr;
@@ -792,11 +944,10 @@ hr {
 }
 .contact-value {
   font-family: var(--f-display);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
   color: var(--c-cream);
-  font-variation-settings: 'opsz' 36;
 }
 .contact-value a {
   color: var(--c-cream);
@@ -807,7 +958,7 @@ hr {
   background-size: 0;
 }
 
-/* -------- Footer -------- */
+/* Footer */
 .site-footer {
   border-top: 1px solid var(--c-line);
   padding: 4rem 0 2.5rem;
@@ -823,20 +974,18 @@ hr {
 }
 .footer-mark {
   font-family: var(--f-display);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  letter-spacing: -0.018em;
+  letter-spacing: 0;
   color: var(--c-cream);
-  font-variation-settings: 'opsz' 96;
   margin-bottom: 0.75rem;
 }
 .footer-tag {
-  font-family: var(--f-display);
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--c-cream-dim);
-  letter-spacing: -0.005em;
-  font-variation-settings: 'opsz' 36;
+  letter-spacing: 0;
   max-width: 28ch;
 }
 .footer h5 {
@@ -868,7 +1017,7 @@ hr {
   color: var(--c-cream-dim);
 }
 
-/* -------- Skip link -------- */
+/* Skip link */
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -884,7 +1033,7 @@ hr {
 }
 .skip-link:focus { left: 1rem; top: 1rem; }
 
-/* -------- Reveal on scroll (CSS-only, optional) -------- */
+/* Reveal */
 .reveal {
   opacity: 0;
   transform: translateY(14px);
@@ -895,7 +1044,6 @@ hr {
   transform: none;
 }
 
-/* -------- Reduced motion -------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -904,11 +1052,10 @@ hr {
   .reveal { opacity: 1; transform: none; }
 }
 
-/* -------- Responsive utilities -------- */
 @media (max-width: 767px) {
   .nav { padding: 1rem 0; }
   .hero { padding-top: 5.5rem; }
-  h1 .ital { font-size: 0.85em; }
+  h1 .ital { font-size: 0.75em; }
   .belief { gap: 0.4rem; }
   .belief-num { font-size: 0.7rem; }
 }

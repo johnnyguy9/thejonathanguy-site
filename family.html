@@ -5,22 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#0a0807" />
 
-<title>Meet the Family — Jonathan Guy</title>
-<meta name="description" content="Meet the family behind Jonathan Guy. Audriana and our boy. Texas Hill Country, Canyon Lake, and the life behind the work." />
-<meta name="keywords" content="Jonathan Guy family, Audriana Guy, Canyon Lake Texas family" />
+<title>Meet the Family. Jonathan Guy.</title>
+<meta name="description" content="Meet the family behind Jonathan Guy. Audriana and our boy Rowdy. Texas Hill Country, Canyon Lake, and the life behind the work." />
+<meta name="keywords" content="Jonathan Guy family, Audriana Guy, Rowdy Guy, Canyon Lake Texas family, Wimberley, Fredericksburg, San Antonio, Trail of Lights" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <link rel="canonical" href="https://thejonathanguy.com/family.html" />
 
+<!-- Search Engine Verification: verified in Google Search Console via DNS (sc-domain property). Bing meta tag will be added when Bing Webmaster Tools is set up. -->
+
 <meta property="og:type" content="profile" />
-<meta property="og:title" content="Meet the Family — Jonathan Guy" />
-<meta property="og:description" content="Audriana and our boy. The Texas Hill Country, family-first." />
+<meta property="og:title" content="Meet the Family. Jonathan Guy." />
+<meta property="og:description" content="Audriana, Rowdy, and the Texas Hill Country life behind the work." />
 <meta property="og:url" content="https://thejonathanguy.com/family.html" />
-<meta property="og:image" content="https://thejonathanguy.com/images/img_7909.jpg" />
+<meta property="og:image" content="https://thejonathanguy.com/images/family-hero.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="preload" as="image" href="/images/family-hero.webp" type="image/webp" fetchpriority="high" />
 <link rel="stylesheet" href="/style.css" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -34,6 +38,17 @@
   ]
 }
 </script>
+
+<!-- Google Analytics 4 — paste GA4 measurement ID into the snippet below to activate. -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+</script>
+-->
 </head>
 
 <body>
@@ -43,10 +58,12 @@
   <div class="container">
     <nav class="nav" aria-label="Primary">
       <a href="/" class="brand">
-        <span class="mark">JG</span>
-        <span>Jonathan Guy</span>
+        <span class="mark" aria-hidden="true">JG</span>
+        <span class="name">Jonathan Guy</span>
       </a>
       <ul class="nav-links">
+        <li><a href="/work.html">Work</a></li>
+        <li><a href="/resume.html">Resume</a></li>
         <li><a href="/family.html" aria-current="page">Meet the Family</a></li>
         <li><a href="/lake-life.html">Lake Life</a></li>
         <li><a href="/contact.html">Contact</a></li>
@@ -59,6 +76,8 @@
   <div class="mobile-panel" id="mobile-panel">
     <ul>
       <li><a href="/">Home</a></li>
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/resume.html">Resume</a></li>
       <li><a href="/family.html">Meet the Family</a></li>
       <li><a href="/lake-life.html">Lake Life</a></li>
       <li><a href="/contact.html">Contact</a></li>
@@ -68,91 +87,139 @@
 
 <main id="main">
 
-  <!-- Editorial intro -->
-  <section class="section" style="padding-top: 8rem; padding-bottom: 4rem;">
+  <section class="section" style="padding-top: 9rem; padding-bottom: 3rem;">
     <div class="container-narrow reveal" style="text-align: center;">
       <span class="eyebrow" style="justify-content: center;">Meet the family</span>
       <h1 style="font-size: clamp(2.6rem, 6.5vw, 5.5rem);">
-        The life<br/>
-        <span style="font-style: italic; color: var(--c-gold); font-variation-settings: 'opsz' 144;">behind the work.</span>
+        The life
+        <span class="serif-ital" style="display: block; color: var(--c-gold);">behind the work.</span>
       </h1>
     </div>
   </section>
 
-  <!-- Feature image -->
-  <section class="reveal">
+  <!-- HERO IMAGE: family at the beach. Natural sizing, no crop, no clip. -->
+  <section class="reveal" style="padding: 1rem 0 3rem;">
     <div class="feature feature-portrait">
-      <img src="/images/img_7813.jpg"
-           alt="Jonathan, Audriana, and our boy on the boat at Canyon Lake"
-           width="1800" height="2400" />
+      <picture>
+        <source srcset="/images/family-hero.webp" type="image/webp" />
+        <img src="/images/family-hero.jpg"
+             alt="Jonathan, Audriana, and Rowdy together at the beach"
+             width="2133" height="3200" loading="eager" fetchpriority="high" decoding="async" />
+      </picture>
     </div>
   </section>
 
-  <!-- Story -->
   <section class="story" style="padding-top: 6rem;">
     <div class="container">
       <div class="story-grid">
         <aside class="story-aside reveal">
           <div class="section-num">Family · 01</div>
-          <h2 style="font-style: italic;">Three of us.<br/>One Hill Country<br/>address.</h2>
+          <h2 class="serif-ital">Three of us.<br/>One Hill Country<br/>address.</h2>
         </aside>
         <div class="story-body reveal">
           <p>
-            My wife is Audriana. Our boy keeps us laughing, exhausted, and grateful in roughly equal measure. The three of us live in Canyon Lake, Texas — Hill Country between San Antonio and Austin, where the sunsets are long, the water is cold in the spring, and the neighbors actually wave.
+            My wife is Audriana. Our boy Rowdy keeps us laughing, exhausted, and grateful in roughly equal measure. The three of us live in Canyon Lake, Texas, right between San Antonio and Austin. That's the magic of the Hill Country. You get the best of two cities and you don't have to live in either of them.
           </p>
           <p>
-            Audriana is the reason any of this works. She's the steady hand on the family operation while I'm running between job sites, project calls, and whatever venture is keeping me up at night. She has a better read on people than I do, sharper instincts about what really matters, and the kind of patience you don't earn — you just get blessed with.
+            Audriana is the reason any of this works. She's the steady hand on the family operation while I'm running between job sites, project calls, and whatever venture is keeping me up at night. She has a better read on people than I do, sharper instincts about what really matters, and the kind of patience you don't earn. You just get blessed with it.
           </p>
           <p>
-            Our son is the reason the work has to mean something. Every operating principle on this site, every business I run, every late night spent fixing a process that should've been written down years ago — it's all designed to leave him a clearer set of instructions than I had. We want him to grow up watching his parents build things, take responsibility, and love each other out loud.
+            Rowdy is the reason the work has to mean something. Every operating principle on this site, every business I run, every late night spent fixing a process that should've been written down years ago. It's all designed to leave him a clearer set of instructions than I had. We want him to grow up watching his parents build things, take responsibility, and love each other out loud.
           </p>
           <p>
-            We're family-first by design. Our calendar gets built around the kids' rhythms before it gets built around mine. Sunday is for church and slow mornings. Most weeknights end at the lake or the dinner table. None of that is accidental.
+            We're family first by design. Our calendar gets built around our kid before it gets built around mine. Sunday is for church and slow mornings. Most weeknights end at the lake or the dinner table. None of that is accidental.
           </p>
           <p>
-            <em>Family, faith, work — in that order.</em> That sequence is the test, and the order is what I'm trying to keep.
+            <em>Family, faith, work. In that order.</em> That sequence is the test, and the order is what I'm trying to keep.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Photo strip -->
+  <!-- HILL COUNTRY -->
   <section class="section" style="padding-top: 2rem;">
     <div class="container">
       <div class="reveal" style="margin-bottom: 3rem;">
-        <span class="eyebrow">Family album</span>
-        <h2>Bits and pieces.</h2>
+        <span class="eyebrow">Around home</span>
+        <h2>Hill Country and a few favorite drives.</h2>
+        <p class="lede" style="margin-top: 1.5rem;">
+          Wimberley to Fredericksburg, Johnson City to San Antonio, Austin and the Trail of Lights. The towns we keep coming back to.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="gallery reveal">
+        <figure class="g-wide">
+          <img src="/images/wimberley.jpg" alt="Family in a hollow cypress tree in Wimberley, Texas" loading="lazy" />
+          <figcaption>Wimberley, Texas</figcaption>
+        </figure>
+        <figure class="g-tall">
+          <img src="/images/fredericksburg.jpg" alt="Audriana and Rowdy at the Fredericksburg Christmas Pyramid" loading="lazy" />
+          <figcaption>Fredericksburg · Christmas Pyramid</figcaption>
+        </figure>
+        <figure class="g-half">
+          <img src="/images/sa-dayofdead.jpg" alt="Family at the Catrina sculpture during Day of the Dead in San Antonio" loading="lazy" />
+          <figcaption>Day of the Dead · San Antonio</figcaption>
+        </figure>
+        <figure class="g-half">
+          <img src="/images/sa-riverwalk.jpg" alt="Jonathan and Audriana at the San Antonio River Walk" loading="lazy" />
+          <figcaption>River Walk · San Antonio</figcaption>
+        </figure>
+        <figure class="g-half">
+          <img src="/images/trail-lights.jpg" alt="Family at the entrance to the Austin Trail of Lights" loading="lazy" />
+          <figcaption>Trail of Lights · Austin</figcaption>
+        </figure>
+        <figure class="g-half">
+          <img src="/images/trail-lights-2.jpg" alt="Family in front of the Texas flag display at the Trail of Lights" loading="lazy" />
+          <figcaption>Trail of Lights · Texas flag</figcaption>
+        </figure>
+        <figure class="g-half">
+          <img src="/images/johnson-city.jpg" alt="Family at the Johnson City Christmas lights" loading="lazy" />
+          <figcaption>Johnson City · Lights Spectacular</figcaption>
+        </figure>
+        <figure class="g-half">
+          <img src="/images/ut-game.jpg" alt="Jonathan and Audriana at a UT football game in Austin" loading="lazy" />
+          <figcaption>UT football · Austin</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- VACATION -->
+  <section class="section" style="padding-top: 1rem;">
+    <div class="container">
+      <div class="reveal" style="margin-bottom: 3rem;">
+        <span class="eyebrow">Off the map</span>
+        <h2>Vacations and a few road trips.</h2>
+        <p class="lede" style="margin-top: 1.5rem;">
+          The trips that pulled us out of the ordinary and reminded us why we love the ordinary so much.
+        </p>
       </div>
     </div>
     <div class="container">
       <div class="gallery reveal">
         <figure class="g-half">
-          <img src="/images/img_7909.jpg" alt="Family inside a hollow tree on a Texas trail" loading="lazy" />
-          <figcaption>On the trail · Hill Country</figcaption>
+          <img src="/images/bali.jpg" alt="Jonathan and Audriana on the Bali coast" loading="lazy" />
+          <figcaption>Bali</figcaption>
         </figure>
         <figure class="g-half">
-          <img src="/images/img_8674.jpg" alt="Family at La Catrina sculpture at sunset, San Antonio" loading="lazy" />
-          <figcaption>San Antonio · Sunset</figcaption>
+          <img src="/images/cozumel.jpg" alt="Jonathan and Audriana on the Cozumel coast" loading="lazy" />
+          <figcaption>Cozumel</figcaption>
         </figure>
-        <figure class="g-half">
-          <img src="/images/img_9540.jpg" alt="Jonathan and our boy driving the boat together on Canyon Lake" loading="lazy" />
-          <figcaption>Driving lessons · age four</figcaption>
-        </figure>
-        <figure class="g-half">
-          <img src="/images/img_7813.jpg" alt="Family selfie on the boat, Canyon Lake" loading="lazy" />
-          <figcaption>Lake Wife · Canyon Lake</figcaption>
+        <figure class="g-full">
+          <img src="/images/cowboys-game.jpg" alt="Jonathan and Audriana at AT&amp;T Stadium for a Cowboys game" loading="lazy" />
+          <figcaption>Cowboys · AT&amp;T Stadium</figcaption>
         </figure>
       </div>
       <p class="caption" style="text-align: center; margin-top: 2rem; max-width: 38ch; margin-left: auto; margin-right: auto;">
-        For more lake content, visit <a href="/lake-life.html">Lake Life</a>.
+        For boat days and Canyon Lake content, visit <a href="/lake-life.html">Lake Life</a>.
       </p>
     </div>
   </section>
 
   <hr style="margin: 0 auto; max-width: 1320px;" />
 
-  <!-- Footer CTA -->
   <section class="section" style="text-align: center;">
     <div class="container-narrow reveal">
       <span class="eyebrow" style="justify-content: center;">Continue</span>
@@ -177,6 +244,8 @@
         <h5>Site</h5>
         <ul>
           <li><a href="/">Home</a></li>
+          <li><a href="/work.html">Work</a></li>
+          <li><a href="/resume.html">Resume</a></li>
           <li><a href="/family.html">Meet the Family</a></li>
           <li><a href="/lake-life.html">Lake Life</a></li>
           <li><a href="/contact.html">Contact</a></li>
@@ -185,15 +254,15 @@
       <div class="footer">
         <h5>Companies</h5>
         <ul>
-          <li><a href="https://pointwake.com/" rel="noopener">PointWake Innovations</a></li>
+          <li><a href="https://pointwake.com/" rel="noopener">PointWake</a></li>
           <li><a href="https://stonecastlehillcountry.com/" rel="noopener">Stonecastle Hill Country</a></li>
-          <li><a href="https://www.linkedin.com/in/jonathan-guy" rel="noopener">LinkedIn</a></li>
-          <li><a href="mailto:jonathan@pointwake.com">jonathan@pointwake.com</a></li>
+          <li><a href="https://www.linkedin.com/in/jonathan-guy-" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.mygreatlearning.com/eportfolio/jonathan-guy" rel="noopener">Portfolio</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-copy">
-      <span>© <span id="current-year">2026</span> · Brandon B. Jonathan Guy</span>
+      <span>© <span id="current-year">2026</span> · Jonathan Guy</span>
       <span>Canyon Lake, Texas</span>
     </div>
   </div>
