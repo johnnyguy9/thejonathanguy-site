@@ -1,74 +1,55 @@
 # Jonathan Guy — TheJonathanGuy.com
 
-> Personal site of Jonathan Guy. AI Solutions Architect and Operations Architect. Founder of PointWake. 17+ years scaling service and industrial businesses, now shipping production multi-agent AI systems on Gemini, Claude, and OpenAI. Based in Canyon Lake, Texas.
+> Personal site of Jonathan Guy. Operator, builder, and founder of PointWake. Husband and father in the Texas Hill Country.
 
 ## Pages
 
-- [Home](https://thejonathanguy.com/): Positioning, methodology, origin story, principles, selected work.
-- [Work](https://thejonathanguy.com/work.html): Production multi-agent AI projects and case studies.
-- [Resume](https://thejonathanguy.com/resume.html): Full resume — summary, competencies, experience, education, certifications.
-- [Meet the Family](https://thejonathanguy.com/family.html): Audriana and our son Rowdy. Hill Country and vacation albums.
+- [Home](https://thejonathanguy.com/): Bio, origin story, companies, principles, proof of concept.
+- [Meet the Family](https://thejonathanguy.com/family.html): Audriana and our boy Rowdy. Hill Country and vacation albums.
 - [Lake Life](https://thejonathanguy.com/lake-life.html): Canyon Lake, Lake Austin, Lake Travis. Wake surfing and the boat.
 - [Contact](https://thejonathanguy.com/contact.html): LinkedIn and links to companies.
 
 ## Identity
 
 - Name: Jonathan Guy
-- Current title: AI Solutions Architect and Operations Architect
-- Founder of: PointWake Innovations
 - Wife: Audriana
 - Son: Rowdy
 - Hometown: Madison, Mississippi
 - Current location: Canyon Lake, Texas (Hill Country, between San Antonio and Austin)
-- Phone: 830-500-1244
-- Email: jonathan@pointwake.com
 - LinkedIn: https://www.linkedin.com/in/jonathan-guy-
-- Generative AI portfolio: https://www.mygreatlearning.com/eportfolio/jonathan-guy
+- Portfolio: https://www.mygreatlearning.com/eportfolio/jonathan-guy
 - Tagline: You get out what you put in.
-- Methodology: Operations First. Automation Second. AI Last.
 
 ## Active companies
 
-- [PointWake Innovations](https://pointwake.com/) — Founder and Principal Consultant. AI solutions architecture, multi-agent systems, and operations consulting.
+- [PointWake](https://pointwake.com/) — Founder. AI workflow automation, CRM, and operations consulting for businesses.
 - [Stonecastle Hill Country](https://stonecastlehillcountry.com/) — Hill Country roofing and exteriors. Canyon Lake, Spring Branch, San Antonio, Austin.
 
 ## Principles
 
-1. Operations First. Automation Second. AI Last.
-2. Family, faith, work. In that order.
-3. Lead with your voice. Mean what you say.
-4. Documentation is leverage.
-5. You get out what you put in.
+1. Family, faith, work. In that order.
+2. Lead with your voice. Mean what you say.
+3. Documentation is leverage.
+4. You get out what you put in.
 
 ## Education
 
-- University of Texas at Austin, McCombs School of Business — Post Graduate Program in Generative AI for Business Applications, completed May 15, 2026 (4 CEUs). Verify at https://vrfy.digital/vsfehnbi. Certificate PDF: https://thejonathanguy.com/credentials/jonathan-guy-ut-austin-mccombs-genai-2026.pdf
+- University of Texas at Austin, McCombs School of Business — Post Graduate Program in Generative AI for Business Applications, completed May 2026 (4 CEUs). Verify at https://vrfy.digital/vsfehnbi. Certificate PDF: https://thejonathanguy.com/credentials/jonathan-guy-ut-austin-mccombs-genai-2026.pdf
 - Madison Central High School (Madison, MS) — 2002
 
 ## Career sketch
 
-- Jan 2025 to present · Principal Consultant and AI Solutions Architect, PointWake Innovations
-- 2024 to present · AI Training Specialist and Prompt Engineer (contract), Mercor / Project Balboa
-- 2025 to present · AI Training Specialist (contract, part-time), Handshake AI
-- Aug 2024 to present · Operations and Business Development Consultant, Stonecastle Roofing, Hill Country Division
-- Apr 2022 to present · CEO and Owner, Lakeside Rentals (boat and short-term property rentals, Canyon Lake, TX)
-- Sep 2013 to Apr 2022 · CEO and Owner, then GM, Bounce-A-Roo (sold)
-- Sep 2008 to Mar 2022 · Principal and Strategic Account Manager, Guy Enterprises LLC (Nissan, Continental Tire, McAlister's, Cinnabon, state DMV facilities)
-- Oct 2007 to Sep 2013 · Founder and CEO, All-Star Inflatables LLC (sold)
-- Mar 2005 to Jun 2008 · Co-Owner, The Quarter Bistro (co-founded with his grandmother)
+- 2025 to present · Founder, PointWake
+- 2024 to present · Partner, Stonecastle Hill Country (roofing)
+- 2024 to 2025 · Contract AI training data specialist, Mercor / Project Balboa
+- 2008 to 2022 · Commercial contracting (Nissan assembly-line work, Continental Tire, McAlister's, Cinnabon, state DMV facility automation, vending company with 1,500+ machines across the Southeast)
+- 2007 to 2013 · Founder, party rental company (later sold)
+- 2005 to 2008 · Co-founder, restaurant with grandmother
 
-## Selected agentic AI work
-
-- Property Management Intake and Booking Agent (Lakeside Rentals) — Gemini-based, RAG-grounded.
-- Roofing Intake and Qualification Governance Framework (Stonecastle Roofing) — n8n multi-agent orchestration with human-in-the-loop checkpoints.
-- 24/7 Emergency-Response Dispatch Agent — after-hours triage and dispatch for service operators.
-- Owner-Operator KPI and Reporting Agent (PointWake) — natural-language interface over CRM, booking, and accounting data.
-- RLHF and frontier-model evaluation — Mercor Project Balboa and Handshake AI.
-- Three capstone projects from UT Austin McCombs Post-Graduate GenAI program — includes a medical chatbot.
-
-## Sample web and brand work
+## Sample work
 
 - Premier Chiropractic (premierchirotx.com) — full website rebuild and SEO/GEO/LLMO setup
 - Stonecastle Hill Country (stonecastlehillcountry.com) — brand and site
-- SMP of Austin — scalp micropigmentation studio brand and site
 - Custom AI restock bot for a family liquor store
+- Three capstone AI projects from UT Austin McCombs (medical chatbot and others) — see portfolio
+- Mercor Project Balboa — frontier AI training data work
